@@ -1,4 +1,3 @@
-import Cards.*
 import FSN.File
 import FSN.Folder
 

@@ -1,11 +1,9 @@
 package FSN
 
-
-class Folder(name: String, vararg args: FileSystemNode) : AbstractFileSystemNode() {
+class Folder(name: String, vararg args: FileSystemNode) : AbstractFileSystemNode(name, null) {
     private var children = ArrayList<FileSystemNode>()
 
     init {
-        setName(name)
         for (arg in args) {
             arg.setRoot(this)
             children.add(arg)
@@ -14,3 +12,4 @@ class Folder(name: String, vararg args: FileSystemNode) : AbstractFileSystemNode
 
     fun getChildren() = children
 }
+

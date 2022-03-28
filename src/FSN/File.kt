@@ -1,13 +1,6 @@
 package FSN
 
-class File(name: String, extension: String) : AbstractFileSystemNode() {
-    private var extension: String
-
-    init {
-        setName(name)
-        this.extension = extension
-    }
-
+class File(name: String, private var extension: String) : AbstractFileSystemNode(name, null) {
     fun getExtension() = extension
 
     override fun getName(): String {
